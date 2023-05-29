@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frye Crook Thailand 2023</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+
+    <!-- Scroll JavaScript Code -->
+    <script>
+      $(document).ready(function() {
+        $(".nav-link").on("click", function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            
+            var hash = this.hash;
+            
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top - 50
+              },
+              800
+            );
+          }
+        });
+      });
+    </script>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">Frye Crook Thailand 2023</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#bangkok" class="nav-link">Where We'll Go</a>
+            </li>
+            <li class="nav-item">
+              <a href="#fyi" class="nav-link">F.Y.I</a>
+            </li>
+            <li class="nav-item">
+              <a href="#todo" class="nav-link">Things to Do</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>You're going to <span class="text-warning"> Thailand! </span></h1>
+            <p class="lead my-4">
+              2 families. 12 people. 40+ hours of travel time. 16,000+ miles. <p>And only 1 fluent speaker.</p>
+            </p>
+            <button
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+              style="color: rgb(255, 208, 0)"
+            >
+              Reserve Spot
+            </button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="home-img.jpg"
+            alt="Boat in Thailand"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Boxes -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-brightness-alt-high"></i>
+                </div>
+                <h3 class="card-title mb-3">Bangkok</h3>
+                <p class="card-text" style="padding: 5px;">
+                  Arrive in Bangkok at approximately 9:45pm on June 16th. We will stay the night at Airee Premier Residence, located 3 miles from Chatuchak Weekend Market. This hotel will have free <b>WiFi</b> and free private parking! <b>Duration: 2 days (6/16-6/18)</b>
+                </p>
+                <a href="#bangkok" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-arrow-right-short"></i>
+                </div>
+                <h3 class="card-title mb-3">Chiang Rai</h3>
+                <p class="card-text" style="padding: 5px;">
+                  Arrive in Chiang Rai at 1:10pm on June 19th. We'll be staying at Le Patta Hotel, which has close proximity to local attractions, as well as free WiFi and parking! We'll explore for 2 days before heading off to Chiang Mai. <b>Duration: 2 days (6/19-6/20)</b>
+                </p>
+                <a href="#rai" class="btn btn-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-thermometer"></i>
+                </div>
+                <h3 class="card-title mb-3">Chiang Mai</h3>
+                <p class="card-text">
+                  Arrive in Chiang Mai via bus on June 21st. We'll check in to the Duangtawan Hotel. We can enjoy the free breakfast and WiFi here! We will be close to the city and nearby temples for sight-seeing. We can also cool off by the pool. <b>Duration: 2 days (6/21-6/22)</b>
+                </p>
+                <a href="#mai" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-arrow-right-short"></i>
+                </div>
+                <h3 class="card-title mb-3">Koh Samui</h3>
+                <p class="card-text">
+                  Our final destination is the island, Koh Samui! Arrive in Koh Samui at 2:15pm on June 23rd where we'll stay at the Chaweng Noi Pool Villa. Here we can relax at the pool and are very close to the ocean. Resort time! (Free WiFi too) <b>Duration: 3 days (6/23-6/25)</b>
+                </p>
+                <a href="#samui" class="btn btn-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Sections -->
+
+    <section id="bangkok" class="p-5 bg-white text-dark">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Bangkok</h2>
+            <p class="lead">
+              The Metropolis
+            </p>
+            <p>
+              Bangkok is a bustling city, and our first stop along the way. This is our chance to look around the many huge malls and markets, as well as several stunning temples. Pictured on the right is the province of Samut Prakan, just a few miles outside of metropolitan Bangkok. We can visit the ancient city that is surrounded by water. Click "Stay" to see more about where we're staying during our time in Bangkok!
+            </p>
+            <a href="https://www.airbnb.com/rooms/40291286?s=42&user_id=310831853&ref_device_id=11495793e45b17f8bd24613181cb7b727e7c5abc&_branch_match_id=1191203881054614810&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdX3NUkJNEoPrPQ3BADn1n8OGgAAAA%3D%3D&source_impression_id=p3_1685243412_VA69VFEEQS08L7du" class="btn btn-light mt-3" target="_blank">
+              <i class="bi bi-chevron-right"></i> Stay
+            </a>
+          </div>
+          <div class="col-md">
+            <img src="samut-prakan.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rai" class="p-5 bg-light text-dark">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="blue-temple.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Chiang Rai</h2>
+            <p class="lead">
+              The cool pace
+            </p>
+            <p>
+              At the Chaweng Noi Pool Villa we can have fun! Free breakfast elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="https://www.lepattachiangrai.com/" class="btn btn-light mt-3 custom-btn" target="_blank">
+              <i class="bi bi-chevron-right"></i> Stay
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+  <style>
+      
+  .custom-btn {
+    background-color: #f8f9fa; /* Light grey background color */
+    border: 2px solid #226fd4; /* Dark grey border */
+    color: #636363; /* Dark grey text color */
+    transition: background-color 0.9s ease; /* Transition effect duration and timing */
+  }
+
+  .custom-btn:hover {
+    background-color: #f1c240; /* Dark grey background color on hover */
+    color: #000000; /* Light grey text color on hover */
+  }
+  </style>
+
+    <section id="mai" class="p-5 bg-dark text-white">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Chiang Mai</h2>
+            <p class="lead">
+              Stunning views
+            </p>
+            <p>
+              There are plenty of temples, night markets, waterfalls, and hikes around the city of Chiang Mai. If we're feeling adventerous, there are also a few nearby elephant sanctuaries! We can also visit Doi Inthanon National Park (pictured on the right), home to the highest mountain and view in all of Thailand.
+            </p>
+            <a href="https://www.duangtawanhotelchiangmai.com/" class="btn btn-light mt-3 custom-btn-mai" target="_blank">
+              <i class="bi bi-chevron-right"></i> Stay
+            </a>
+          </div>
+          <div class="col-md">
+            <img src="mai.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <style>
+      .custom-btn-mai {
+        background-color: #f8f9fa; /* Light grey background color */
+        border: 2px solid #bdbdbd; /* Dark grey border */
+        color: #636363; /* Dark grey text color */
+        transition: background-color 0.9s ease; /* Transition effect duration and timing */
+      }
+    
+      .custom-btn-mai:hover {
+        background-color: #599953; /* Dark grey background color on hover */
+        color: #ffffff; /* Light grey text color on hover */
+      }
+  </style>
+
+    <section id="samui" class="p-5 bg-light text-dark">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="swimming-pool.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Koh Samui</h2>
+            <p class="lead">
+              The popular island resort
+            </p>
+            <p>
+              At the Chaweng Noi Pool Villa we can have fun! Free breakfast elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates? 
+            </p>
+            <a href="https://www.chawengnoipoolvilla.com/" class="btn btn-light mt-3" target="_blank">
+              <i class="bi bi-chevron-right"></i> Stay
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Question Accordion -->
+    <section id="fyi" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                What Time are Our Flights?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                The first flight will be out of San Francisco at 12:50pm on June 15th.&nbsp;The next flight will be on June 19th out of Bangkok to Chiang Rai.&nbsp;<br /><br />
+                The last local flight will be June 23 when we fly out of Chiang Mai into Koh Samui.&nbsp;<br /><br />
+                And our flight out of Thailand is June 26th at 2:35pm where we fly first to Bangkok, and then back to San Francisco!
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                Packing & Weather
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Thailand is known for being humid and having hot summers. You'll want to pack clothes that will be comfortable for long days of traveling, walking, and being outside in the sun! Consult with your parent/family for exact packing lists.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                Thai Food
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                When in Thailand, we'll dive into the incredible world of Thai cuisine! <b>However</b>, we will need be cautious with street food. Bring tums or special medicine if you have a sensitive stomach.&nbsp;<br /><br />
+                Dylan says, "Drinking Coke helps, too."
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                Thai Food
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                Where are we Staying?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="todo" class="p-5" style="background-color: rgb(168, 147, 147);">
+      <div class="container">
+        <h2 class="text-center text-white">Things to do</h2>
+        <p class="lead text-center text-white mb-5">
+          Here are some of the things we can do at the locations we're visiting!
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://cf.bstatic.com/xdata/images/xphoto/300x320/134338928.jpg?k=e79d0b4da38c66c067b2e424361f59a5c8fe2a3337e551e0b3b2c60e414ef551&o="
+                  class="rounded-circle mb-3" alt="Image of temple" style="max-width: 80%; width: 200px; height: 200px;"
+                />
+                <h3 class="card-title mb-3">Temple</h3>
+                <p class="card-text">
+                  Experience the beauty of Bangkok's temples during our family trip. Visit Wat Arun, a captivating temple on the riverbank, with its stunning spires and picturesque views.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/08/cover-image-the-grand-palace.jpg"
+                  class="rounded-circle mb-3"
+                  alt="Image of Grand Palace" style="max-width: 80%; width: 200px; height: 200px;"
+                />
+                <h3 class="card-title mb-3" style="color: rgb(102, 75, 1);">The Grand Palace</h3>
+                <p class="card-text">
+                  Located in Bangkok, the Grand Palace is a beautiful royal villa that was home to Thai kings until 1932.
+                  There is a dress code- men must wear long pants, women must cover legs to above the knee, and no tight or shoulder-revealing clothing. There is also an entrance fee of 500 baht.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/9d/d7/ed/chai-lai-orchid.jpg?w=700&h=-1&s=1"
+                  class="rounded-circle mb-3"
+                  alt="Image of Girl with Elephant" style="max-width: 80%; width: 200px; height: 200px;"
+                />
+                <h3 class="card-title mb-3" style="color: darkgrey;">Chai Lai Orchid</h3>
+                <p class="card-text">
+                  Embark on a captivating journey to Thailand's breathtaking Chai Lai Orchid, where lush jungles, majestic elephants, and authentic Thai hospitality await, offering our family an enchanting escape filled with cherished moments and unforgettable adventures in nature's embrace. Immerse yourselves in a harmonious blend of beauty and cultural immersion, creating memories that will forever linger in our hearts.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://www.outrigger.com/AdaptiveImages/optimizely/ea18e67c-085e-4d5a-9b9c-f85717d3b73d/outrigger-koh-samui-beach-resort-edgewater25.jpg?width=576&height=384&stamp=68b2203de345d3e54b3f89e469baae3af9081ba8"
+                  class="rounded-circle mb-3"
+                  alt="Image of Beach" style="max-width: 100%; width: 200px; height: 200px;"
+                />
+                <h3 class="card-title mb-3">thailand</h3>
+                <p class="card-text">
+                  From exploring the island's lush landscapes and sparkling beaches to immersing ourselves in its vibrant culture (we can see the Monk Cave or the Fisherman's Village) and tasty Thai cuisine, our journey promises an unforgettable blend of relaxation and exploration.
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Hotel Location Info:</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold"> Phone:</span> (555) 555-5555
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold"> Phone:</span> (333) 333-3333
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold"> Email:</span> (555)
+                enroll@frontendbc.test
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Email:</span>
+                student@frontendbc.test
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2021 Frontend Bootcamp</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  First Name:
+                </label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+    </script>
+  </body>
+</html>
