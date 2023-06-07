@@ -53,3 +53,14 @@ body::before {
   .card-body {
     height: 100%;
   }
+
+  .img-fluid:hover {
+    filter: brightness(125%);
+    transition: filter 0.7s ease;
+  }
+ 
+  
+  
+  
+  
+    
