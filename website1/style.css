@@ -1,0 +1,66 @@
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+  }
+  
+  #map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .news-input {
+      width: 50%;
+    }
+  }
+
+  .accordion-link {
+    background-color: #ffe5da;
+    color: #333;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+  }
+
+  .accordion-link:hover {
+    background-color: #ddd;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+  
+  .accordion-link {
+    display: inline-block;
+    /* Add any additional styles as desired */
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .card {
+    height: 100%;
+  }
+  
+  .card-body {
+    height: 100%;
+  }
+
+  .img-fluid:hover {
+    filter: brightness(125%);
+    transition: filter 0.7s ease;
+  }
+ 
+  
+  
+  
+  
+    
