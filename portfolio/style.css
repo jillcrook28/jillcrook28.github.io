@@ -15,7 +15,7 @@
 }
 
 .small-circle-image {
-  width: 80% !important;
+  width: 40% !important;
   border-radius: 50% !important;
   object-fit: cover !important;
   background-color: var(--bs-body-tertiary) !important;
@@ -37,12 +37,9 @@
 }
 
 .btn.btn-primary {
-  background-color: #82aeff;
+  background-color: #007bff;
   color: #fff;
-  border-color: #25455a;
-  text-align: left;
-  padding-right: 80px;
-  transition: background-color 0.5s ease;
+  border-color: #007bff;
 }
 
 .btn.btn-primary:hover {
