@@ -8,10 +8,28 @@
 }
 
 
+.icon-link {
+  background-color: rgb(179, 255, 255) !important;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 300;
+  padding-left: 20px;
+  font-size: larger;
+}
+
+
 .my-5 {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
   padding-top: 1rem !important;
+}
+
+.lead {
+  padding: 1em;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  font-weight: 300;
+  font-size: x-large;
 }
 
 .small-circle-image {
